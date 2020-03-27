@@ -1,0 +1,19 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #D2E1F2;
+}
+
+.navbar {
+  background-color: #ffffff;
+}
+
+.btn {
+  border-color: #173560;
+  color: #173560;
+}
+
+.btn:hover {
+  background-color: #173560;
+  border-color: #173560;
+  color: #ffffff;
+}
