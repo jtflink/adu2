@@ -1,25 +1,19 @@
-<h1 class="mb-3">Welcome to the TravelRecsApp!</h1>
-<h5 class="mb-5">Click on a location below to get or add travel recommendations for some of the top travel destinations, or add recommendations for a new location by clicking below!</h5>
 
-<p class="mb-5">
-    <% if @current_user %>
-        <a href="/new_place" class="btn">Add a new location</a>
-    <% else %>
-        <a href="/logins/new" class="btn">Sign in to add a new location</a>
-    <% end %>
-</p>
-
-<h3 class="mb-4">Locations</h3>
-
-<% for place in @places %>
-    <h5 class="mb-4">
-        Recommendations for <a href="/places/<%= place[:id] %>"><%= place[:title] %></a>
-    </h5>
-<% end %>
-
-<div class="mt-5">
-    <h3 class="mb-4">Let the TravelRecsApp team know you like this app!</h3>
-    <form action="/send_text" method="post">
-        <button type="submit" class="btn">Send text</button>
-    </form>
-</div>
+    <div class="container text-center">
+    <h1 class="pb-4">Welcome to Cottage! We can check whether you're eligible for an ADU in seconds. Ready to go?</h1>
+        <div class="form pt-4">
+          <form>
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+              </div>
+              <div class="col">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+              </div>
+            </div>
+            <div class="button">
+              <a class="btn btn-outline-light mt-5" href="address.html" role="button">Let's do it!</a>
+            </div>
+          </form>
+        </div>
+    </div>

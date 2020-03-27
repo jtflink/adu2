@@ -1,19 +1,38 @@
 body {
-  font-family: 'Raleway', sans-serif;
-  background-color: #D2E1F2;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #E3EFEF;
+}
+
+h1 {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.container {
+  align-items: center;  
 }
 
 .navbar {
   background-color: #ffffff;
+  color: #284D60;
+}
+
+.navbar img {
+  height: 40px;
+}
+
+.form {
+  padding-left: 25%;
+  padding-right: 25%;
 }
 
 .btn {
-  border-color: #173560;
-  color: #173560;
+  border-color: #284D60;
+  color: #284D60;
 }
 
 .btn:hover {
-  background-color: #173560;
-  border-color: #173560;
+  background-color: #284D60;
+  border-color: #284D60;
   color: #ffffff;
 }
