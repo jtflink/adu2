@@ -1,0 +1,25 @@
+<h1 class="mb-3">Welcome to the TravelRecsApp!</h1>
+<h5 class="mb-5">Click on a location below to get or add travel recommendations for some of the top travel destinations, or add recommendations for a new location by clicking below!</h5>
+
+<p class="mb-5">
+    <% if @current_user %>
+        <a href="/new_place" class="btn">Add a new location</a>
+    <% else %>
+        <a href="/logins/new" class="btn">Sign in to add a new location</a>
+    <% end %>
+</p>
+
+<h3 class="mb-4">Locations</h3>
+
+<% for place in @places %>
+    <h5 class="mb-4">
+        Recommendations for <a href="/places/<%= place[:id] %>"><%= place[:title] %></a>
+    </h5>
+<% end %>
+
+<div class="mt-5">
+    <h3 class="mb-4">Let the TravelRecsApp team know you like this app!</h3>
+    <form action="/send_text" method="post">
+        <button type="submit" class="btn">Send text</button>
+    </form>
+</div>
