@@ -2,16 +2,19 @@
   <div class="container text-center">
     <h2 class="pb-4">Great to meet you <%= @first_name %>! What's your property's address?</h2>
     <div class="form pt-4">
-      <form action="/address/create" method="post">
+      <form action="/home_type">
         <div class="row">
           <div class="col">
-            <input type="text" class="form-control" name="address" placeholder="Address">
+            <input type="text" class="form-control" name="address" placeholder="Address" required>
           </div>
         </div>
-        <div class="button">
-          <a class="btn btn-outline-light btn-lg mt-5" href="address.html" role="button">Let's do it!</a>
+        <div>
+          <button type="submit" class="button btn btn-lg mt-5">Next</button> 
         </div>
       </form>
+      <div>
+        <a class="back_button btn btn-lg mt-5" href="/" role="button">Back</a> 
+      </div>
     </div>
   </div>
 </div>

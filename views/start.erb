@@ -2,17 +2,17 @@
   <div class="container text-center">
     <h2 class="pb-4">Welcome to Cottage! We can check whether you're eligible for an ADU in seconds. Ready to go?</h2>
     <div class="form pt-4">
-      <form action="/address/create" method="post">
+      <form action="/address">
         <div class="row">
           <div class="col">
-            <input type="text" class="form-control" name="first_name" placeholder="First name">
+            <input type="text" class="form-control" name="first_name" placeholder="First name" required>
           </div>
           <div class="col">
-            <input type="text" class="form-control" name="last_name" placeholder="Last name">
+            <input type="text" class="form-control" name="last_name" placeholder="Last name" required>
           </div>
         </div>
-        <div class="button">
-          <a class="btn btn-outline-light btn-lg mt-5" href="address.html" role="button">Let's do it!</a>
+        <div>
+          <button type="submit" class="button btn btn-lg mt-5">Let's do it!</button> 
         </div>
       </form>
     </div>

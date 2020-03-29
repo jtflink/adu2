@@ -6,12 +6,16 @@ body {
 .jumbotron {
   height: 100vh;
   padding-top: 10%;
+  background-color: #E3EFEF;
 }
 
-h2 {
-    
+h2 {   
   padding-left: 10%;
   padding-right: 10%;
+}
+
+.form-check {
+    padding-left: 30%;
 }
 
 .navbar {
@@ -28,13 +32,24 @@ h2 {
   padding-right: 25%;
 }
 
-.btn {
+.button {
   border-color: #284D60;
   color: #284D60;
 }
 
-.btn:hover {
+.button:hover {
   background-color: #284D60;
   border-color: #284D60;
   color: #ffffff;
+}
+
+.back_button {
+  border-color: #E3EFEF;
+  color: #284D60;
+}
+
+.back_button:hover {
+  background-color: #E3EFEF;
+  border-color: #E3EFEF;
+  color: #284D60;
 }
