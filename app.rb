@@ -33,6 +33,22 @@ get "/" do
     view "places"
 end
 
+post "/address/create" do
+    puts "params: #{params}"
+
+    @first_name = "first_name"
+
+    redirect "address"
+end
+
+get "/address" do
+    puts "params: #{params}"
+
+    @first_name
+
+    view "address"
+end
+
 post "/send_text" do
     account_sid = ENV["TWILIO_ACCOUNT_SID"]
     auth_token = ENV["TWILIO_AUTH_TOKEN"]
