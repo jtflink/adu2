@@ -14,5 +14,13 @@ get "/address" do
 end
 
 get "/home_type" do
-    view "home_type"
+        view "home_type"
+end
+
+get "/adu_type" do
+    if params["home_type"] == "1"
+        view "adu_type"
+    else
+        view "not_eligible"
+    end
 end
