@@ -48,19 +48,9 @@ end
 get "/parking" do
     if params["existingadu"] == "2"
         if @@adutype == "1"
-            view "parking"
-        elsif @@adutype == "2"
-            view "parking"
-        elsif @@adutype == "1" && @@adutype == "2"
-            view "parking"
-        elsif @@adutype == "2" && @@adutype == "3"
-            view "parking"
-        elsif @@adutype == "1" && @@adutype == "3"
-            view "parking"
-        elsif @@adutype == "1" && @@adutype == "2" && @@adutype == "3"
-            view "parking"
-        else
             view "conversion"
+        else @@adutype == "2" || @@adutype == "3"
+            view "parking"
         end
     else
         view "existingadu_ne"
@@ -68,54 +58,8 @@ get "/parking" do
 end
 
 get "/eligible" do
-    if params["parking"] == "1"
-        if @@adutype == "1" || @@adutype == "2"
-            view "eligible"
-        elsif @@adutype == "1" && @@adutype == "2"
-            view "eligible"
-        else 
-            view "eligible2"
-        end
-    elsif params["parking"] == "2"
-        if @@adutype == "1" || @@adutype == "2"
-            view "eligible"
-        elsif @@adutype == "1" && @@adutype == "2"
-            view "eligible"
-        else 
-            view "eligible2"
-        end
-    elsif params["parking"] == "3"
-        if @@adutype == "1" || @@adutype == "2"
-            view "eligible"
-        elsif @@adutype == "1" && @@adutype == "2"
-            view "eligible"
-        else 
-            view "eligible2"
-        end
-    elsif params["parking"] == "1" && params["parking"] == "2"
-        if @@adutype == "1" || @@adutype == "2"
-            view "eligible"
-        elsif @@adutype == "1" && @@adutype == "2"
-            view "eligible"
-        else 
-            view "eligible2"
-        end
-    elsif params["parking"] == "2" && params["parking"] == "3"
-        if @@adutype == "1" || @@adutype == "2"
-            view "eligible"
-        elsif @@adutype == "1" && @@adutype == "2"
-            view "eligible"
-        else 
-            view "eligible2"
-        end
-    elsif params["parking"] == "1" && params["parking"] == "2" && params["parking"] == "3"
-        if @@adutype == "1" || @@adutype == "2"
-            view "eligible"
-        elsif @@adutype == "1" && @@adutype == "2"
-            view "eligible"
-        else 
-            view "eligible2"
-        end
+    if params["parking"] == "1" || params["parking"] == "2" || params["parking"] == "3"
+        view "eligible"
     else
         view "parking2"
     end
@@ -131,13 +75,7 @@ end
 
 get "/eligibleparking" do
     if params["parking2"] == "1"
-        if @@adutype == "1" || @@adutype == "2"
-            view "eligible"
-        elsif @@adutype == "1" && @@adutype == "2"
-            view "eligible"
-        else 
-            view "eligible2"
-        end
+        view "eligible"
     else
         view "parking_ne"
     end
@@ -147,7 +85,7 @@ get "/eligibleconversion" do
     if params["eligibleconversion"] == "1"
         view "eligibleconversion"
     else
-        if @@adutype == "3"
+        if @@adutype == "1"
             view "conversion_ne_1"
         else
             view "conversion_ne_2"
