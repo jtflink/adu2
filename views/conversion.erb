@@ -1,20 +1,20 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container text-center">
     <div>
-      <h2 class="pb-4">Will you be able to provide at least one off-street parking spot for your ADU?	</h2>
+      <h2 class="pb-4">Let's check whether you're eligible for a conversion ADU. Is the space you would be interested in converting into an ADU between X sqft and X sqft?</h2>
     </div>
     <div class="form pt-4">
-      <form action="/eligibleparking">
+      <form action="/eligibleconversion">
         <div class="row">
           <div class="col">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="parking2" id="1" value="1" required>
+              <input class="form-check-input" type="radio" name="eligibleconversion" id="1" value="1" required>
               <label class="form-check-label" for="1">Yes</label>
             </div>
           </div>
           <div class="col">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="parking2" id="2" value="2" required>
+              <input class="form-check-input" type="radio" name="eligibleconversion" id="2" value="2" required>
               <label class="form-check-label" for="2">No</label>
             </div>
           </div>
@@ -24,7 +24,7 @@
         </div>
       </form>
       <div>
-        <a class="back_button btn btn-lg mt-5" href="/parkingback" role="button">Back</a> 
+        <a class="back_button btn btn-lg mt-5" href="/existingaduback" role="button">Back</a> 
       </div>
     </div>
   </div>
