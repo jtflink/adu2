@@ -8,13 +8,19 @@ get "/" do
 end
 
 get "/address" do
-    @first_name = params["first_name"]
+    @@first_name = params["first_name"]
+
+    view "address"
+end
+
+get "/address2" do
+    @@first_name
 
     view "address"
 end
 
 get "/hometype" do
-        view "hometype"
+    view "hometype"
 end
 
 get "/adutype" do
@@ -26,7 +32,9 @@ get "/adutype" do
 end
 
 get "/existingadu" do
-        view "existingadu"
+    @@adutype = params["adutype"]
+    
+    view "existingadu"
 end
 
 get "/adutypeback" do
@@ -34,10 +42,12 @@ get "/adutypeback" do
 end
 
 get "/parking" do
-    if params["existingadu"] == "2"
-        view "parking"
-    else
+    if params["existingadu"] == "2" && @@adutype = "3"
+        view "conversion"
+    elsif params["existingadu"] == "1"
         view "existingadu_ne"
+    else
+        view "parking"
     end
 end
 
