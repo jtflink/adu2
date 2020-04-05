@@ -59,7 +59,11 @@ end
 
 get "/eligible" do
     if params["parking"] == "1" || params["parking"] == "2" || params["parking"] == "3"
-        view "eligible"
+        if @@adutype == "1"
+            view "eligible"
+        else 
+            view "eligible2"
+        end
     else
         view "parking2"
     end
@@ -75,7 +79,11 @@ end
 
 get "/eligibleparking" do
     if params["parking2"] == "1"
-        view "eligible"
+        if @@adutype == "1"
+            view "eligible"
+        else 
+            view "eligible2"
+        end
     else
         view "parking_ne"
     end
@@ -83,7 +91,11 @@ end
 
 get "/eligibleconversion" do
     if params["eligibleconversion"] == "1"
-        view "eligibleconversion"
+        if @@adutype == "1"
+            view "eligibleconversion2"
+        else 
+            view "eligibleconversion"
+        end
     else
         if @@adutype == "1"
             view "conversion_ne_1"
